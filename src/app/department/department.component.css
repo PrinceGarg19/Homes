@@ -1,0 +1,39 @@
+.container{
+  margin-left: 13%;
+
+}
+div.card {
+  width: 250px;
+  box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* text-align: center; */
+}
+
+.btn {
+  width: 100px;
+  box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid black;
+  border-color: #0d6efd;
+  color: #0d6efd;
+
+  /* text-align: center; */
+}
+.btn:hover {
+  background-color: #0d6efd;
+  border: 2px solid black;
+  border-color: #0d6efd;
+  color: #fff;
+}
+
+
+
+.card{
+  padding: 0%;
+}
+
+.icon{
+  font-size:25px;
+}
+.card-text{
+  font-size: 13px;
+  color: grey;
+}

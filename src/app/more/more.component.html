@@ -1,0 +1,132 @@
+<app-navbar></app-navbar>
+<div class="container" >
+
+  <h2 class="mt-4" style="color: grey;">Department Page</h2>
+  <div class="row">
+    <div class="col">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/Department/1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/Department/2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/Department/3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="col">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloribus eos incidunt iure odit perferendis qui repellendus sunt voluptate, voluptatibus.
+      <br><br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aperiam consequuntur corporis cumque deserunt dolore dolorum ea eius, est eveniet excepturi id illum incidunt, itaque natus necessitatibus odit possimus quaerat qui quis recusandae rem reprehenderit similique suscipit, vitae voluptatum. Blanditiis ipsum laudantium omnis quasi quis quo saepe similique, veritatis!
+      <br><br>
+      <b>Working time</b> <br><br>
+      Mon. - Fri. 6:00AM - 20:00PM
+      <br><br>
+      Sat. - Sun. 6:00AM - 17:00PM
+      <br><br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis illo maiores nemo omnis repellendus. Amet cupiditate dignissimos dolorum eveniet ipsa nisi obcaecati provident quibusdam quis temporibus! Ab accusamus asperiores autem magnam, optio qui rem repudiandae. Asperiores aut eos illo maxime quasi quidem sed sit tempora voluptatibus. Adipisci aut distinctio quas?
+    </p>
+  </div>
+
+  <div class="container m-5" >
+    <h2 class="">Doctors</h2>
+
+    <table class="table mt-5">
+      <thead>
+        <tr class="table-active">
+
+          <th scope="col">Photo</th>
+          <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Role</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr *ngFor="let row of employeeData">
+          <td><img src={{row.path}} class="card-img-top circle" alt="..."></td>
+          <!-- <td>{{row.id}}</td> -->
+          <td>{{row.name}}</td>
+          <td>{{row.age}}</td>
+          <td>{{row.role}}</td>
+          <td>{{row.gender}}</td>
+          <td>{{row.address}}</td>
+          <td>
+          <button type="button " (click)="onEdit(row)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" style="border-radius: 20%;"><i class="bi bi-pencil-square"></i></button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formvalue">
+            <div class="mb-2">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input type="text" formControlName="name" class="form-control rounded" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-2">
+              <label for="exampleInputPassword1" class="form-label">Age</label>
+              <input type="text" formControlName="age" class="form-control rounded" id="exampleInputPassword1">
+            </div>
+            <div class="row">
+              <div class="col">
+                  <label for="exampleInputPassword1" class="form-label">Role</label>
+                  <input type="text" formControlName="role" class="form-control rounded" id="exampleInputPassword1">
+                </div>
+                <div class="col">
+                  <label for="exampleInputPassword1" class="form-label">Gender</label>
+                  <input type="text" formControlName="gender" class="form-control rounded" id="exampleInputPassword1">
+                </div>
+              </div>
+
+            <div class="mb-2">
+              <label for="exampleInputPassword1" class="form-label">Address</label>
+              <input type="text" formControlName="address" class="form-control rounded" id="exampleInputPassword1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="PostEmployeeDetails()">Add</button> -->
+          <button *ngIf="showUpdate" type="button" class="btn btn-primary" (click)="updateEmployeeDetails()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+
+
+</div>

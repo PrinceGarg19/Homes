@@ -1,0 +1,15 @@
+.container{
+  margin-left: 6%;
+  margin-right: 6%;
+
+}
+
+.col{
+  font-size: 15px;
+}
+
+.circle
+{ border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}

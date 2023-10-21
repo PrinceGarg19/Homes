@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+<div class="container mt-5" >
+  <h2 class="">Appointments</h2>
+
+  <table class="table mt-5">
+    <thead>
+      <tr class="table-active">
+        <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date</th>
+      <th scope="col">Visit Time</th>
+      <th scope="col">Number</th>
+      <th scope="col">Doctor</th>
+      <th scope="col">Injury/Condition</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <tr *ngFor="let row of employeeData">
+        <td>12{{row.id}}</td>
+        <td>{{row.name}}</td>
+        <td style="color:blue"><i class="bi bi-envelope-at"></i>&nbsp;{{row.email}}</td>
+        <td>{{row.date}}</td>
+        <td>{{row.visit_time}}</td>
+        <td style="color:blue"><i class="bi bi-telephone"></i>&nbsp;{{row.mobile}}</td>
+        <td>Dr. {{row.doctor}}</td>
+        <td>{{row.condition}}</td>
+        <td>
+        <button type="button " (click)="onEdit(row)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" style="border-radius: 20%;"><i class="bi bi-pencil-square"></i></button>
+        <button type="button " (click)="deleteEmployee(row)" class="btn btn-danger ms-2" style="border-radius: 20%;"><i class="bi bi-trash3"></i></button>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formvalue">
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">First Name</label>
+            <input type="text" formControlName="name" class="form-control rounded" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Email ID</label>
+            <input type="text" formControlName="email" class="form-control rounded" id="exampleInputPassword1">
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="exampleInputPassword1" class="form-label">Date</label>
+                <input type="text" formControlName="date" class="form-control rounded" id="exampleInputPassword1">
+              </div>
+              <div class="col">
+                <label for="exampleInputPassword1" class="form-label">Visit_time</label>
+                <input type="text" formControlName="visit_time" class="form-control rounded" id="exampleInputPassword1">
+              </div>
+            </div>
+
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+            <input type="text" formControlName="mobile" class="form-control rounded" id="exampleInputPassword1">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Doctor</label>
+            <input type="text" formControlName="doctor" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Condition</label>
+            <input type="text" formControlName="condition" class="form-control" id="exampleInputPassword1">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="PostEmployeeDetails()">Add</button>
+        <button *ngIf="showUpdate" type="button" class="btn btn-primary" (click)="updateEmployeeDetails()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex">
+<button type="button " (click)="clickAddEmployee()" class="btn btn-primary ms-2 float" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  ><i class="bi bi-person-fill-add my-float"></i></button>
+</div>
+</div>
+
+
+

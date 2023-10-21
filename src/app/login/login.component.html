@@ -1,0 +1,55 @@
+
+<div class="container" >
+  <div class="row">
+    <div class="col-md-6">
+      <div  *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+        <strong> !! Login Succesful !! </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" ></button>
+      </div>
+      <div class="card">
+        <div class="text-center">
+          <h1>Login</h1>
+          <h6>Please enter Username & password !!</h6>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group mb-3">
+            <label for="floatingInput">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="Username"
+              [(ngModel)]="username"
+
+              />
+            </div>
+            <div class="form-group">
+              <label for="Password">Password</label>
+              <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              [(ngModel)]="password"
+            />
+          </div>
+
+          <div class="form-group my-3">
+            <label for="exampleSelect">Select Role</label>
+            <select class="form-control" id="exampleSelect">
+              <option>Admin</option>
+              <option>Doctor</option>
+              <option>Patient</option>
+            </select>
+          </div>
+          <button type="submit"  class="btn btn-primary my-2">Login</button>
+
+          <button id="signup"  (click) = "signup()" class="btn btn-danger">New User?</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

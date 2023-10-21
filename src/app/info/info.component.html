@@ -1,0 +1,110 @@
+<app-navbar></app-navbar>
+<div class="p-3 mb-4 bg-secondary text-white">
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-3">
+      <a href="#" id="pop" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <img id="imageresource" src="./assets/p.jpg" width="200px" height="200px" class="rounded img-thumbnail">
+      </a>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Profile Picture</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img id="imageresource" src="./assets/p.jpg" width="600px" height="600px" class="rounded img-thumbnail">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <h2 class="pb-3">{{person}} Details</h2>
+      <div *ngIf="person === 'patient' ; else idblock">
+        <p> {{person}}ID : P{{d[0].id}}</p>
+      </div>
+      <ng-template #idblock>
+        <p> {{person}}ID : E{{d[0].id}}</p>
+      </ng-template>
+
+      <p> Name : {{d[0].name}}</p>
+      <p> Age : {{d[0].age}}</p>
+
+    </div>
+    <div class="col pt-2">
+      <br><br>
+      <p> Sex : {{d[0].sex}}</p>
+      <p> Mobile : {{d[0].mobile}}</p>
+      <p> Email : {{d[0].email}}</p>
+      <div *ngIf="person === 'Patient' ; else elseBlock"> <p> Aadhar : <span>{{d[0].aadhar}}</span></p> </div>
+      <ng-template #elseBlock> <p> PAN Number : <span>{{d[0].pan}}</span></p> </ng-template> <!-- pan change-->
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance,
+            as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+            plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance,
+            as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance,
+            as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

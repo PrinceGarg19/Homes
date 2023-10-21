@@ -1,0 +1,277 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "root",
+      "password": "root",
+      "role": "Admin"
+    },
+    {
+      "id": 3,
+      "username": "root",
+      "password": "root",
+      "role": "Admin"
+    },
+    {
+      "id": 2,
+      "username": "Prince",
+      "password": "prince",
+      "role": "Doctor"
+    }
+  ],
+  "appointment": [
+    {
+      "name": "A",
+      "email": "xyz@gmail.com",
+      "date": "19/06/2002",
+      "visit_time": "10:00:00 AM",
+      "mobile": "0045435400000",
+      "doctor": "Shaun murphy",
+      "condition": "Fracture",
+      "id": 1
+    },
+    {
+      "name": "B",
+      "email": "xyz@gmail.com",
+      "date": "19/06/2002",
+      "visit_time": "16:00:00 PM",
+      "mobile": "0045435400000",
+      "doctor": "Shaun murphy",
+      "condition": "Fracture",
+      "id": 5
+    },
+    {
+      "name": "C",
+      "id": 2,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "visit_time": "06:00:00 AM",
+      "email": "xyz@gmail.com",
+      "doctor": "Shaun murphy",
+      "condition": "Fracture",
+      "date": "19/06/2002",
+      "status": "Approved"
+    },
+    {
+      "name": "D",
+      "id": 3,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "visit_time": "02:00:00 AM",
+      "email": "xyz@gmail.com",
+      "doctor": "Shaun murphy",
+      "condition": "Fracture",
+      "date": "19/06/2002",
+      "status": "Pending"
+    },
+    {
+      "name": "E",
+      "id": 4,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "visit_time": "20:54:00 PM",
+      "email": "xyz@gmail.com",
+      "doctor": "Shaun murphy",
+      "condition": "Fracture",
+      "date": "19/06/2002",
+      "status": "Approved"
+    }
+  ],
+  "patient": [
+    {
+      "name": "Aa",
+      "id": 1,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "date": "19/06/2002",
+      "status": "Approved"
+    },
+    {
+      "name": "B",
+      "id": 5,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "date": "19/06/2002",
+      "status": "Pending"
+    },
+    {
+      "name": "C",
+      "id": 2,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "date": "19/06/2002",
+      "status": "Approved"
+    },
+    {
+      "name": "D",
+      "id": 3,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "date": "19/06/2002",
+      "status": "Pending"
+    },
+    {
+      "name": "E",
+      "id": 4,
+      "age": "42",
+      "address": "71 Pilgrim Avenue Chevy Chase, MD 20815 ",
+      "mobile": "0045435400000",
+      "date": "19/06/2002",
+      "status": "Approved"
+    }
+  ],
+  "patientdata": [
+    {
+      "id": 1,
+      "name": "User 1",
+      "age": "20",
+      "sex": "Male",
+      "mobile": "0000000000",
+      "email": "xyz@gmail.com",
+      "aadhar": "3541xxxxxxx"
+    }
+  ],
+  "employeedata": [
+    {
+      "id": 1,
+      "name": "User 1",
+      "age": "20",
+      "sex": "Male",
+      "mobile": "0000000000",
+      "email": "xyz@gmail.com",
+      "pan": "GPA1548S415"
+    }
+  ],
+  "doctor": [
+    {
+      "id": 1,
+      "path": "./assets/1.jpg",
+      "name": "Dr. Spohie",
+      "age": "34",
+      "role": "Gynecologist",
+      "gender": "Female",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 2,
+      "path": "./assets/2.jpg",
+      "name": "Dr. Liam",
+      "age": "34",
+      "role": "Dentist",
+      "gender": "Male",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 3,
+      "path": "./assets/3.jpg",
+      "name": "Dr. Noah",
+      "age": "34",
+      "role": "Nursing",
+      "gender": "Male",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 4,
+      "path": "./assets/4.jpg",
+      "name": "Dr. James",
+      "age": "34",
+      "role": "Physical Therapy",
+      "gender": "Male",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 5,
+      "path": "./assets/5.jpg",
+      "name": "Dr. Emma",
+      "age": "34",
+      "role": "Audiology",
+      "gender": "Female",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 6,
+      "path": "./assets/6.jpg",
+      "name": "Dr. Olivia",
+      "age": "34",
+      "role": "Dentist",
+      "gender": "Female",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 7,
+      "path": "./assets/7.jpg",
+      "name": "Dr. Logan",
+      "age": "34",
+      "role": "Physical Therapy",
+      "gender": "Male",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 8,
+      "path": "./assets/8.jpg",
+      "name": "Dr. Benjamin",
+      "age": "34",
+      "role": "Nursing",
+      "gender": "Male",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    },
+    {
+      "id": 9,
+      "path": "./assets/9.jpg",
+      "name": "Dr. Mason",
+      "age": "34",
+      "role": "Dentist",
+      "gender": "Male",
+      "address": "795 Folsom Ave, Suite 600 San Francisco, CADGE 94107"
+    }
+  ],
+  "payment": [
+    {
+      "id": "1",
+      "name": "Prince",
+      "doctor": "Prince",
+      "date": "1213",
+      "charges": "213",
+      "tax": "231",
+      "discount": "112",
+      "total": "321"
+    },
+    {
+      "id": "23",
+      "name": "asda",
+      "doctor": "dasd",
+      "date": "sad",
+      "charges": "12",
+      "tax": "12",
+      "discount": "12",
+      "total": 1200
+    },
+    {
+      "id": "OJFX-kj",
+      "name": null,
+      "doctor": null,
+      "date": null,
+      "charges": "12",
+      "tax": "12",
+      "discount": "12",
+      "total": 12
+    },
+    {
+      "id": "12",
+      "name": "Prince",
+      "doctor": "Prince",
+      "date": "123123",
+      "charges": "1200",
+      "tax": "200",
+      "discount": "100",
+      "total": 1300
+    }
+  ]
+}

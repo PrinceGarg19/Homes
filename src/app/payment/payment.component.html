@@ -1,0 +1,93 @@
+<app-navbar></app-navbar>
+<div class="container mt-5" >
+  <h2 class="" style="color:grey">Payment</h2>
+
+  <table class="table mt-5">
+    <thead>
+      <tr class="table-active">
+        <th scope="col">Bill NO</th>
+      <th scope="col">Name</th>
+      <th scope="col">Doctor</th>
+      <th scope="col">Date</th>
+      <th scope="col">Charges</th>
+      <th scope="col">Tax</th>
+      <th scope="col">Discount</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <tr *ngFor="let row of employeeData">
+        <td>13{{row.id}}</td>
+        <td>{{row.name}}</td>
+        <td >{{row.doctor}}</td>
+        <td>{{row.date}}</td>
+        <td>$ {{row.charges}}</td>
+        <td>$ {{row.tax}}</td>
+        <td>$ {{row.discount}}</td>
+        <td>$ {{row.total}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formvalue">
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Bill NO</label>
+            <input type="text" formControlName="id" class="form-control rounded" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">First Name</label>
+            <input type="text" formControlName="name" class="form-control rounded" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Doctor</label>
+            <input type="text" formControlName="doctor" class="form-control rounded" id="exampleInputPassword1">
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="exampleInputPassword1" class="form-label">Date</label>
+                <input type="text" formControlName="date" class="form-control rounded" id="exampleInputPassword1">
+              </div>
+              <div class="col">
+                <label for="exampleInputPassword1" class="form-label">Charges</label>
+                <input type="text" formControlName="charges" class="form-control rounded" id="exampleInputPassword1">
+              </div>
+            </div>
+
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Tax</label>
+            <input type="text" formControlName="tax" class="form-control rounded" id="exampleInputPassword1">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Discount</label>
+            <input type="text" formControlName="discount" class="form-control" id="exampleInputPassword1">
+          </div>
+          <!-- <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Total</label>
+            <input type="text" formControlName="total" class="form-control" id="exampleInputPassword1">
+          </div> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="PostEmployeeDetails()">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex">
+  <button type="button " (click)="clickAddEmployee()" class="btn btn-primary ms-2 float" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  ><i class="bi bi-patch-plus-fill"></i></button>
+  </div>
+
+
